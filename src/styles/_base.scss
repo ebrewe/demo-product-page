@@ -1,0 +1,13 @@
+@use './theme/variables';
+
+body {
+  font-family: var(--base-font-family);
+  font-size: var(--base-font-size);
+  line-height: var(--base-line-height);
+  color: var(--color-text-body);
+}
+
+.column-content,
+.button {
+  font-family: var(--column-font-family);
+}
