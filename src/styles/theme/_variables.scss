@@ -3,13 +3,15 @@
 
 :root {
   --color-primary: #605DEC;
+  --color-primary-light: #EDEDFE;
+  --color-primary-dark: #344293;
+  --color-button-secondary: #F9F9FB;
   --color-text-body: #1A1A1A;
   --color-text-light: #808080;
   --color-text-placeholder: rgba(0,0,0,0.3);
   --color-bg-body: #FFF;
   --color-border: #E4E4EF;
   --color-border-focus: #000;
-  --color-primary-light: #EDEDFE;
   --color-secondary: #31AA27;
   --color-secondary-light:#EBF6EB;
   --color-warning: #E99518;
@@ -21,15 +23,19 @@
   --gap-large: 16px;
   --base-font-size: 1rem; /* 16px */ 
   --base-line-height: 1.25rem; /* 20px */ 
-  --column-font-size: 0.875rem; /* 14px */ 
+--column-font-size: 0.875rem; /* 14px */ 
   --button-font-size: 0.875rem; 
   --base-font-family: 'Nunito Sans', sans-serif;
   --column-font-family: 'Inter', sans-serif;
   --icon-size: 24px;
+  --input-padding-x: 16px; 
+  --input-padding-y: 8px; 
+  --input-height: calc(44px - 2 * var(--input-padding-y));
+  --input-border-radius: 4px;
+  --base-radius: 4px;
 }
 
 // borders
-$radius: 8px;
 $border: 1px solid var(--color-border);
 
 // spacing

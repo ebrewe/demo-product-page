@@ -10,14 +10,17 @@
 </template>
 
 <script setup lang="ts">
-import {ref, onMounted} from 'vue';
-import { useProducts } from '@/composables/useProducts';
-const {products, productError, fetchProducts} = useProducts();
+import {ref,  onMounted} from 'vue';
+import { storeToRefs } from 'pinia';
+import { useProductStore } from '@/stores/products.store';
+
+const productStore = useProductStore();
+const {products, productError} = storeToRefs(productStore);
 
 const loading = ref(true);
 
 onMounted(async () => {
-  await fetchProducts();
+  await productStore.fetchProducts();
   loading.value = false;
 });
 </script>
