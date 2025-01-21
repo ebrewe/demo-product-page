@@ -18,12 +18,13 @@
   --color-warning-light:#FFF4E4;
   --color-danger: #F93232;
   --color-danger-light: #FFF0F0;
-  --base-padding: 18px 16px; 
+  --base-padding-x: 16px;
+  --base-padding-y: 18px;
   --base-gap: 10px;
   --gap-large: 16px;
   --base-font-size: 1rem; /* 16px */ 
   --base-line-height: 1.25rem; /* 20px */ 
---column-font-size: 0.875rem; /* 14px */ 
+  --column-font-size: 0.875rem; /* 14px */ 
   --button-font-size: 0.875rem; 
   --base-font-family: 'Nunito Sans', sans-serif;
   --column-font-family: 'Inter', sans-serif;
@@ -33,11 +34,15 @@
   --input-height: calc(44px - 2 * var(--input-padding-y));
   --input-border-radius: 4px;
   --base-radius: 4px;
+  --base-shadow: 0 -3px 30px #0000004d;
+  --z-index-modal: 1000;
+  --z-index-dropdown: 100;
+  --width-site-max: 1186px;
 }
 
 // borders
 $border: 1px solid var(--color-border);
 
 // spacing
-$padding: var(--base-padding);
+$padding: var(--base-padding-y) var(--base-padding-x);
 $gap: var(--base-gap);

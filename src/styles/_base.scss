@@ -4,10 +4,19 @@ body {
   font-family: var(--base-font-family);
   font-size: var(--base-font-size);
   line-height: var(--base-line-height);
-  color: var(--color-text-body);
+  
 }
 
-.column-content,
-.button {
-  font-family: var(--column-font-family);
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  &:focus,
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--color-border-focus);
+    border-radius: var(--base-radius);
+  }
 }

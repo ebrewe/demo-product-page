@@ -17,7 +17,7 @@
 import { withDefaults, computed } from 'vue';
 
 interface buttonProps {
-  variant?: 'default' | 'secondary';
+  variant?: 'default' | 'secondary' | 'text';
   size?: 'small' | 'medium' | 'large';
   disabled?: boolean;
   loading?: boolean;
@@ -46,7 +46,7 @@ $button-color-default-shade: #fff;
 $button-bg-default-shade: var(--color-primary-dark);
 $button-bg-secondary: var(--color-button-secondary);
 $button-color-secondary: #000;
-$button-bg-secondary-shade: var(--color-primary);
+$button-color-secondary-shade: var(--color-primary);
 
 .tc-button {
   display: inline-block;
@@ -74,7 +74,16 @@ $button-bg-secondary-shade: var(--color-primary);
     background-color: $button-bg-secondary;
 
     &:hover {
-      background-color: $button-bg-secondary-shade;
+      color: $button-color-secondary-shade;
+    }
+  }
+
+  &.button-text {
+    color: $button-color-secondary;
+    background-color: transparent;
+
+    &:hover {
+      color: $button-color-secondary-shade;
     }
   }
 

@@ -23,13 +23,32 @@ const authPassed = computed(() => route.meta.requiresAuth);
 header {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
-  padding: 1rem;
+  flex-direction: column;
+  position: relative;
+
+  margin: 40px 18px 23px 34px; // so, so lame
+
+  // tablet
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 40px 26px 18px 26px;
+  }
+
+  @media (min-width: 992px) {
+    align-items: center;
+    margin: 80px 0 76px;
+  }
 }
 
 .header-logo {
   padding: 0;
   margin-right: auto;
+  margin-bottom: var(--gap-large);
+
+  @media (min-width: 992px) {
+    margin-bottom: 0;
+  }
 
   img {
     width: 210px;
