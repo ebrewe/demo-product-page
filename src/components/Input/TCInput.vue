@@ -50,6 +50,8 @@ const hasIconAfter = computed(() => slots['icon-after']);
 .tc-input--wrapper {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  width: 100%;
 }
 
 .tc-input--label {
@@ -60,12 +62,17 @@ const hasIconAfter = computed(() => slots['icon-after']);
 .tc-input--container {
   position: relative;
   flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .tc-input--input {
   padding: var(--input-padding-y) var(--input-padding-x);
   height: var(--input-height);
   border: 1px solid #ccc;
+  width:100%;
   border-radius: 0 var(--input-border-radius) var(--input-border-radius) 0; //lame gotcha
   
   &::placeholder {
@@ -88,7 +95,6 @@ const hasIconAfter = computed(() => slots['icon-after']);
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  pointer-events: none;
   width: 24px;
   height: 24px;
 }

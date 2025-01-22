@@ -1,11 +1,7 @@
 <template>
   <div>
     <p v-if="loading">Loading...</p>
-    <ul v-if="products.length && !productError">
-      <li v-for="product in products" :key="product.id">
-        {{ product.product }}
-      </li>
-    </ul>
+    <ProductTable v-else :products="products" :total-products="products.length" :search-query="getQuery"/>
   </div>
 </template>
 
@@ -13,9 +9,14 @@
 import {ref,  onMounted} from 'vue';
 import { storeToRefs } from 'pinia';
 import { useProductStore } from '@/stores/products.store';
+import ProductTable from '@/components/ProductTable/ProductTable.vue';
+import { useSearchStore } from '@/stores/search.store';
 
 const productStore = useProductStore();
+const searchStore = useSearchStore();
+
 const {products, productError} = storeToRefs(productStore);
+const { getQuery } = storeToRefs(searchStore);
 
 const loading = ref(true);
 

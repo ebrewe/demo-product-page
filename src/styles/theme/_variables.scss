@@ -20,12 +20,17 @@
   --color-danger-light: #FFF0F0;
   --base-padding-x: 16px;
   --base-padding-y: 18px;
+  --padding-y-small: 8px;
   --base-gap: 10px;
   --gap-large: 16px;
+  --gap-site: 25px;
+  --gap-site-small: 16px; // actually 15 and 17 but I refuse to do that. 
   --base-font-size: 1rem; /* 16px */ 
   --base-line-height: 1.25rem; /* 20px */ 
-  --column-font-size: 0.875rem; /* 14px */ 
+  --table-font-size: 0.875rem; /* 14px */ 
   --button-font-size: 0.875rem; 
+  --font-medium: 0.875rem; /* 14px */
+  --font-small: 0.75rem; /* 12px */
   --base-font-family: 'Nunito Sans', sans-serif;
   --column-font-family: 'Inter', sans-serif;
   --icon-size: 24px;
@@ -40,8 +45,6 @@
   --width-site-max: 1186px;
 }
 
-// borders
-$border: 1px solid var(--color-border);
 
 // spacing
 $padding: var(--base-padding-y) var(--base-padding-x);

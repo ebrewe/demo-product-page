@@ -20,3 +20,17 @@ a {
     border-radius: var(--base-radius);
   }
 }
+
+h2 {
+  font-family: var(--column-font-family);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+h3 {
+  font-family: var(--column-font-family);
+  font-weight: bold;
+  font-size: var(--font-medium);
+  line-height: 22px;
+}

@@ -7,6 +7,7 @@
     ]"
     :disabled="disabled || loading"
     @click="onClick"
+    ref="button"
   >
     <slot />
     <span v-if="loading" class="button-loading-spinner"></span>
@@ -14,7 +15,7 @@
 </template>
 
 <script setup lang="ts">
-import { withDefaults, computed } from 'vue';
+import { ref, withDefaults, computed } from 'vue';
 
 interface buttonProps {
   variant?: 'default' | 'secondary' | 'text';
@@ -31,11 +32,17 @@ const props = withDefaults(defineProps<buttonProps>(), {
 });
 const emit = defineEmits(['click']);
 
-const buttonClass = computed(() => `button-${props.variant} button-${props.size}`);
+const button = ref<HTMLButtonElement | null>(null);
+
+const buttonClass = computed(() => `button-${props.variant} tc-button-${props.size}`);
 
 const onClick = (e: any) => {
   emit('click', e);
 };
+
+defineExpose({
+  button,
+}); 
 </script>
 
 <style lang="scss" scoped>

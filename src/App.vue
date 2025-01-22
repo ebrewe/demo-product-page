@@ -16,9 +16,16 @@ import SkipLink from './components/SkipLink/SkipLink.vue';
 
 <style scoped>
 .page {
-  width: 100%;
+  width: calc(100vw - var(--gap-site-small) * 2);
+  padding: 0 var(--gap-site-small) 0;
+  /* minimum between 100vh and 100% of the viewport */
   max-width: var(--width-site-max);
-  padding: 0 var(--gap-large);
   margin: 0 auto;
+  min-width: calc(291px + var(--gap-site-small) * 2);
+
+  @media(min-width: 768px) {
+    width: calc(100vw - var(--gap-site) * 2);
+    padding: 0 var(--gap-site) 100px;
+  }
 }
 </style>

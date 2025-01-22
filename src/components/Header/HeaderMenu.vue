@@ -13,8 +13,13 @@
       <img :src="MenuButton" alt="Menu button" v-else />
     </TCButtonHamburger>
     <div  id="header-menu-overlay" :class="{'header-menu-overlay': true, 'is-open': menuOpen}">
+      <nav role="navigation">
       <HeaderMenuItems />
+      </nav>
     </div>
+    <nav role="navigation" class="main-navigation-desktop">
+      <HeaderMenuItems />
+    </nav>
   </div>
 </template>
 
@@ -60,8 +65,19 @@ onBeforeUnmount(() => {
   width: 60px;
   height: 60px;
 
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
+    position: relative;
+    display:flex; 
+    justify-content: flex-end;
+    align-items: center;
     width: auto;
+  }
+}
+.main-navigation-desktop {
+  display: none;
+
+  @media (min-width: 992px) {
+    display: flex;
   }
 }
 .toggle-menu {
@@ -72,12 +88,13 @@ onBeforeUnmount(() => {
   width: 44px;
   height: 44px;
   z-index: calc(var(--z-index-dropdown) + 1);
+  right: 
 
   span {
     font-size: 1.5rem;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     display: none;
   }
 }
